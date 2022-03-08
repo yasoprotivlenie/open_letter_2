@@ -185,7 +185,7 @@
       const names = tsv
         .split("\n")
         .slice(1)
-        .map((l) => l.split("\t")[1])
+        .map((l) => (l.split("\t")[1] || "").trim())
         .filter(Boolean);
 
       el.innerHTML = "";
