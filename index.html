@@ -22,7 +22,8 @@
       <a class="text-blue-500" href="#eng">English</a>
 
       <p class="lead text-xl text-black">
-        В связи с принятием «закона» о фейках хотим уточнить: война — это война, а не «спецоперация».
+        В связи с принятием «закона» о фейках хотим уточнить: война — это война,
+        а не «спецоперация».
       </p>
 
       <blockquote cite="#s">
@@ -184,7 +185,8 @@
       const names = tsv
         .split("\n")
         .slice(1)
-        .map((l) => l.split("\t")[1]);
+        .map((l) => l.split("\t")[1])
+        .filter(Boolean);
 
       el.innerHTML = "";
 
