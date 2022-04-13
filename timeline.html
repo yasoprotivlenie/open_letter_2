@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>О сопротивлении / 抵抗に関する資料 / Projects on Resistance</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div
+      class="flex lg:flex-row flex-col lg:space-y-0 space-y-2 lg:space-x-2 container mx-auto text-sm tracking-wider px-2 mt-2"
+    >
+    <a href="/" class="btn text-white bg-black">
+      НЕТ ВОЙНЕ! 戦争反対！ STOP
+      THE WAR!
+    </a>
+      <a href="about" class="btn"
+        >О сопротивлении / 抵抗に関する資料 / Projects on Resistance</a
+      >
+      <a href="media" class="btn">Публикации / 出版物 / Publications</a>
+      <a href="help" class="btn">Как помочь / 貢献したい方へ / How to help</a>
+    </div>
+
+    <article
+      class="prose prose-base sm:prose-xl print:text-sm lg:prose-xl mx-auto pb-16 pt-10 px-4 print:grid grid-cols-2 gap-x-4"
+    >
+      <h1 class="hidden print:block col-span-2 mb-0">Russians Against War</h1>
+        <ul id="list">
+
+        </ul>
+
+    </article>
+
+    <script type="module">
+      const res = await fetch("/timeline.tsv");
+      const text = await res.text();
+
+      const el = document.getElementById("list");
+
+      for (const line of text.split('\n')) {
+        const [date, desc] = line.split('\t');
+        if (!date || !desc) continue;
+
+        const li = document.createElement('li');
+
+        li.innerHTML = `<span class="font-bold">${date}</span> ${desc}`;
+
+        el.appendChild(li);
+      }
+
+    </script>
+  </body>
+</html>
