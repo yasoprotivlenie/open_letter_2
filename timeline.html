@@ -86,41 +86,1277 @@
     </div>
 
     <article
-      class="prose prose-base sm:prose-xl print:text-sm lg:prose-xl mx-auto py-16 px-4 gap-6 grid grid-cols-1 lg:grid-cols-3 container max-w-7xl"
+      class="prose prose-base sm:prose-xl print:text-sm lg:prose-xl mx-auto py-16 px-4 text-center container max-w-7xl font-bold"
     >
-      <ul id="list"></ul>
-      <ul id="list-2"></ul>
-      <ul id="list-3"></ul>
+      <h2>
+        Россия, хроника <del>пиздеца</del> событий последних 22 лет /<br/>
+        <span class="jp-bold">ロシア、過去22年間の出来事の記録</span> / <br/>
+        Russia,
+        a chronicle of the events of the last 22 years
+      </h2>
     </article>
 
-    <script type="module">
-      async function setList([sel, url]) {
-        const res = await fetch(url);
-        const text = await res.text();
-
-        const el = document.getElementById(sel);
-
-        for (const line of text.split("\n")) {
-          const [date, desc] = line.split("\t");
-          if (!date || !desc) continue;
-
-          const li = document.createElement("li");
-
-          const cn = sel === "list-2" ? "jp-bold" : "font-bold";
-
-          li.innerHTML = `<span class="${cn}">${date}</span> ${desc}`;
-
-          el.appendChild(li);
-        }
-      }
-
-      await Promise.all(
-        [
-          ["list", "/timeline.tsv"],
-          ["list-2", "/timeline-jp.tsv"],
-          ["list-3", "/timeline-eng.tsv"],
-        ].map(setList)
-      );
-    </script>
+    <article
+      class="prose prose-base sm:prose-xl print:text-sm lg:prose-xl mx-auto py-16 px-4 gap-6 grid grid-cols-1 lg:grid-cols-3 container max-w-7xl"
+    >
+      <div id="list no-prose">
+        <li>
+          <span class="font-bold pr-2">1999</span>обострение ситуации в Чечне,
+          взрывы жилых домов в Москве, Волгодонске, Буйнакске,
+          <a
+            href="https://ja.wikipedia.org/wiki/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E3%83%81%E3%82%A7%E3%83%81%E3%82%A7%E3%83%B3%E7%B4%9B%E4%BA%89"
+            >ввод войск на территорию Чечни</a
+          >
+          «с целью уничтожения боевиков».
+        </li>
+        <li>
+          <span class="font-bold pr-2">31 декабря 1999</span>президент России
+          Борис Ельцин уходит в отставку и назначает своим преемником Владимира
+          Путина.
+        </li>
+        <li>
+          <span class="font-bold pr-2">26 марта 2000</span>Владимир Путин
+          официально избирается на первый президентский срок.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2000</span>новым гимном РФ назначается
+          советский гимн в новой редакции.
+        </li>
+        <li>
+          <span class="font-bold pr-2">апрель 2000</span>официальное окончание
+          Второй чеченской войны. Партизанская война продолжалась до 2009 года.
+        </li>
+        <li>
+          <span class="font-bold pr-2">октябрь 2002</span>захват террористами
+          театрального центра на Дубровке в Москве. Погибли 125 заложников.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2000</span>«Дело
+          <a
+            href="https://ja.wikipedia.org/wiki/NTV_(%E3%83%AD%E3%82%B7%E3%82%A2)"
+            >НТВ</a
+          >». Постепенная ликвидация независимого телевизионного канала,
+          критически освещавшего войну в Чечне, теракты и политику Путина в
+          целом.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2003</span>«Дело ЮКОСа». Арест и
+          уголовное дело против главы нефтяной компании «Юкос»
+          <a
+            href="https://ja.wikipedia.org/wiki/%E3%83%9F%E3%83%8F%E3%82%A4%E3%83%AB%E3%83%BB%E3%83%9B%E3%83%89%E3%83%AB%E3%82%B3%E3%83%95%E3%82%B9%E3%82%AD%E3%83%BC"
+            >Михаила Ходорковского.</a
+          >
+        </li>
+        <li>
+          <span class="font-bold pr-2">2003-2004</span>теракты в городах России,
+          в самолетах, в Московском метро, после которых Путин произнес
+          известную фразу: «Россия не ведет переговоров с террористами, она их
+          уничтожает».
+        </li>
+        <li>
+          <span class="font-bold pr-2">2003</span>отравление журналиста
+          <a
+            href="https://ja.wikipedia.org/wiki/%E3%83%A6%E3%83%BC%E3%83%AA%E3%83%BB%E3%82%B7%E3%82%A7%E3%82%B3%E3%83%81%E3%83%BC%E3%83%92%E3%83%B3"
+            >Юрия Щекочихина</a
+          >, который занимался расследованием обстоятельств взрывов домов в
+          Москве и Волгодонске и темой коррупции в органах власти.
+        </li>
+        <li>
+          <span class="font-bold pr-2">март 2004</span>выборы президента.
+          Владимир Путин переизбирается на второй срок.
+        </li>
+        <li>
+          <span class="font-bold pr-2">1 сентября 2004</span>захват заложников в
+          школе в Беслане. Погибли 333 человека, в том числе 186 детей.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2004</span>закон об отмене прямых выборов
+          глав субъектов РФ, теперь они назначаются Кремлем.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2004</span>Эстония, Латвия, Болгария,
+          Румыния, Словакия, Словения и Литва входят в НАТО. Спустя три года в
+          <a
+            href="https://en.wikipedia.org/wiki/Munich_speech_of_Vladimir_Putin"
+            >«Мюнхинской речи»</a
+          >
+          Путин по поводу расширения НАТО скажет, что «мы видим пренебрежение
+          основополагающими принципами международного права».
+        </li>
+        <li>
+          <span class="font-bold pr-2">2004</span>
+          <a
+            href="https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%AC%E3%83%B3%E3%82%B8%E9%9D%A9%E5%91%BD"
+            >«Оранжевая революция»</a
+          >
+          в Украине.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2005</span>изменение закона о выборах в
+          Госдуму РФ. Теперь кандидаты обязаны проходить по партийным спискам,
+          отменены одномандатные избирательные округа.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2006</span>принятие концепции
+          <a href="https://en.wikipedia.org/wiki/Sovereign_democracy"
+            >«суверенной демократии»</a
+          >.
+        </li>
+        <li>
+          <span class="font-bold pr-2">7 октября 2006</span>убийство журналистки
+          и правозащитницы
+          <a
+            href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%B3%E3%83%8A%E3%83%BB%E3%83%9D%E3%83%AA%E3%83%88%E3%82%B3%E3%83%95%E3%82%B9%E3%82%AB%E3%83%A4"
+            >Анны Политковской</a
+          >, много занимавшейся войной в Чечне.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2007</span>«Мюнхенская речь».
+          Приостановление в РФ действия
+          <a
+            href="https://ja.wikipedia.org/wiki/%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E9%80%9A%E5%B8%B8%E6%88%A6%E5%8A%9B%E6%9D%A1%E7%B4%84"
+            >Договора об обычных вооруженных силах в Европе.</a
+          >
+        </li>
+        <li>
+          <span class="font-bold pr-2">2008</span>согласно Конституции РФ
+          Владимир Путин не имеет права переизбираться на третий срок. От
+          главной российской партии «Единая Россия» в выборах участвует Дмитрий
+          Медведев, бывший глава администрации Путина. Медведев выигрывает
+          выборы. Путин становится председателем правительства страны.
+        </li>
+        <li>
+          <span class="font-bold pr-2">август 2008</span>
+          <a
+            href="https://ja.wikipedia.org/wiki/%E5%8D%97%E3%82%AA%E3%82%BB%E3%83%81%E3%82%A2%E7%B4%9B%E4%BA%89_(2008%E5%B9%B4)"
+            >Российско-грузинский военный конфликт.</a
+          >
+        </li>
+        <li>
+          <span class="font-bold pr-2">2008</span>поправки к Конституции РФ,
+          <a
+            href="https://en.wikipedia.org/wiki/2008_amendments_to_the_Constitution_of_Russia"
+            >увеличение президентского срока с 4 до 6 лет.</a
+          >
+        </li>
+        <li>
+          <span class="font-bold pr-2">2008</span>дело юриста
+          <a
+            href="https://ja.wikipedia.org/wiki/%E3%82%BB%E3%83%AB%E3%82%B2%E3%82%A4%E3%83%BB%E3%83%9E%E3%82%B0%E3%83%8B%E3%83%84%E3%82%AD%E3%83%BC"
+            >Сергея Магнитского.</a
+          >
+        </li>
+        <li>
+          <span class="font-bold pr-2">15 июля 2009</span>убийство
+          правозащитницы
+          <a href="https://en.wikipedia.org/wiki/Natalya_Estemirova"
+            >Натальи Эстемировой.</a
+          >
+        </li>
+        <li>
+          <span class="font-bold pr-2">2010</span>общественная кампания
+          <a href="https://en.wikipedia.org/wiki/Putin_Must_Go"
+            >«Путин должен уйти»</a
+          >: сбор подписей с требованием отставки Путина.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2011</span>Путин объявляет о том, что
+          снова будет участвовать в выборах президента. Это получило название
+          «рокировка». Путин заявляет, что о «рокировке» они договорились с
+          Медведевым еще в 2007 году.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2011</span>
+          <a
+            href="https://ja.wikipedia.org/wiki/2011%E5%B9%B4%E3%83%AD%E3%82%B7%E3%82%A2%E5%8F%8D%E6%94%BF%E5%BA%9C%E9%81%8B%E5%8B%95"
+            >Массовое протестное движение.</a
+          >
+          Создание
+          <a href="https://en.wikipedia.org/wiki/Anti-Corruption_Foundation"
+            >Фонда борьбы с коррупцией</a
+          >
+          Алексея Навального.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2011</span>Гражданская война в Ливии.
+          Путин осудил НАТО за ввод своих войск.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2012</span>выборы президента. Владимир
+          Путин
+          <a
+            href="https://ja.wikipedia.org/wiki/2012%E5%B9%B4%E3%83%AD%E3%82%B7%E3%82%A2%E5%A4%A7%E7%B5%B1%E9%A0%98%E9%81%B8%E6%8C%99"
+            >избирается на свой третий срок.</a
+          >
+          На выборах массово фиксируются фальсификации.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2012</span>
+          <a
+            href="https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%AA%E3%82%A2%E5%86%85%E6%88%A6"
+            >Гражданская война в Сирии.</a
+          >
+          Россия официально ввела в страну свои войска в 2015 году.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2012</span>
+          <a
+            href="https://ja.wikipedia.org/wiki/%E3%82%BB%E3%83%AB%E3%82%B2%E3%82%A4%E3%83%BB%E3%82%B7%E3%83%A7%E3%82%A4%E3%82%B0"
+            >Сергей Шойгу</a
+          >
+          становится министром обороны. Реформы армии.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2012</span>возвращение статьи «О клевете»
+          в Уголовный кодекс РФ. Теперь за распространение сведений, которые
+          власть посчитает «порочащими честь и достоинство другого человека»
+          (например, представителя власти), предусмотрены штрафы и
+          исправительные работы.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2012</span>закон «об иностранных
+          агентах». Неправительственные организации признаются «иностранными
+          агентами», если они получают финансовую поддержку из других стран и по
+          мнению российских властей занимаются политической деятельностью. Из-за
+          новых юридических условий десяткам НКО из медицинской, культурной,
+          социальной сфер пришлось прекратить свою деятельность.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2012</span>
+          <a href="https://en.wikipedia.org/wiki/Ildar_Dadin"
+            >«закон Ильдара Дадина».</a
+          >
+          Запрет на проведение собраний, митингов, демонстраций, маршей и
+          пикетов несколько раз в течение шестимесячного периода. Ильдар Дадин,
+          первый осужденный по этой статье, был приговорен к трем годам тюрьмы.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2012</span>
+          <a href="https://en.wikipedia.org/wiki/Dima_Yakovlev_Law"
+            >«закон Димы Яковлева»</a
+          >: запрет на усыновление детей-сирот из России гражданами США
+          (считается ответом на санкции США в связи с «делом Магнитского»).
+        </li>
+        <li>
+          <span class="font-bold pr-2">2013</span>Фонд борьбы с коррупцией
+          начинает публиковать расследования о коррупционном имуществе
+          российских политиков.
+        </li>
+        <h4>В 2013 году принимается ряд законов:</h4>
+        <li>
+          закон о внесудебном закрытии интернет-ресурсов. Позволяет властям
+          блокировать сайты, которые, по мнению властей, «призывают к массовым
+          протестам или экстремизму», без решения суда.
+        </li>
+        <li>
+          закон «об оскорблении чувств верующих». Поправки, предусматривающие
+          уголовную ответственность в виде лишения свободы. Приняты после дела
+          <a
+            href="https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%83%E3%82%B7%E3%83%BC%E3%83%BB%E3%83%A9%E3%82%A4%E3%82%AA%E3%83%83%E3%83%88"
+            >Pussy Riot.</a
+          >
+        </li>
+        <li>
+          закон о
+          <a
+            href="https://ja.wikipedia.org/wiki/%E3%83%AD%E3%82%B7%E3%82%A2%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E5%90%8C%E6%80%A7%E6%84%9B%E5%AE%A3%E4%BC%9D%E7%A6%81%E6%AD%A2%E6%B3%95"
+            >запрете «пропаганды гомосексуализма».</a
+          >
+          Запрет на деятельность, которая, по мнению властей, «пропагандирует
+          нетрадиционные сексуальные отношения среди несовершеннолетних».
+        </li>
+        <li>
+          <span class="font-bold pr-2">2014</span>
+          <a
+            href="https://ja.wikipedia.org/wiki/%E3%83%AD%E3%82%B7%E3%82%A2%E3%81%AB%E3%82%88%E3%82%8B%E3%82%AF%E3%83%AA%E3%83%9F%E3%82%A2%E3%81%AE%E4%BD%B5%E5%90%88"
+            >аннексия Крыма</a
+          >, санкции против России, ответное российское продовольственное
+          эмбарго.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2014</span>закон о выборах в
+          Государственную думу. Новые условия ограничивают доступ независимым
+          кандидатам и кандидатам от небольших партий.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2015</span>убийство
+          <a
+            href="https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%AA%E3%82%B9%E3%83%BB%E3%83%8D%E3%83%A0%E3%83%84%E3%82%A9%E3%83%95"
+            >Бориса Немцова</a
+          >, одного из главных оппозиционных политиков. Немцов в том числе автор
+          доклада
+          <a href="https://en.wikipedia.org/wiki/Putin._War">«Путин. Война»</a>
+          о вмешательстве России в украинскую политику и участии российских
+          вооруженных сил в присоединении Крыма и войне на востоке Украины.
+          Заказчик убийства не найден по сей день.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2015</span>закон «о нежелательных
+          организациях», разрешает властям закрывать неправительственные
+          организации, деятельность которых «угрожает национальной безопасности
+          РФ».
+        </li>
+        <li>
+          <span class="font-bold pr-2">2017</span>Фонд борьбы с коррупцией
+          публикует громкое расследование
+          <a href="https://en.wikipedia.org/wiki/He_Is_Not_Dimon_to_You"
+            >«Он вам не Димон»</a
+          >
+          о Дмитрии Медведеве. Массовые протестные акции по всей стране.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2018</span>выборы президента. Владимир
+          Путин избирается на свой четвертый срок.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2018</span>
+          <a
+            href="https://en.wikipedia.org/wiki/Poisoning_of_Sergei_and_Yulia_Skripal"
+            >отравление Сергея и Юлии Скрипаль.</a
+          >
+        </li>
+        <li>
+          <span class="font-bold pr-2">2018</span>убийство в
+          Центральноафриканской республике российских журналистов, которые
+          снимали документальный фильм о присутствии в стране российской военной
+          компании
+          <a
+            href="https://ja.wikipedia.org/wiki/%E3%83%AF%E3%82%B0%E3%83%8A%E3%83%BC%E3%83%BB%E3%82%B0%E3%83%AB%E3%83%BC%E3%83%97"
+            >«ЧВК Вагнера».</a
+          >
+        </li>
+        <li>
+          <span class="font-bold pr-2">2019</span>поправки к закону об
+          «иностранных агентах». Теперь этот статус можно присваивать физическим
+          лицам. Расширение списка иностранных агентов среди СМИ.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2020</span>в послании Федеральному
+          собранию Путин говорит, что Россия впервые в своей истории смогла
+          опередить другие страны в области ракетно-ядерных вооружений.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2020</span>Путин анонсирует референдум по
+          поводу внесения поправок в Конституцию РФ. Одна из поправок -
+          возможность одного человека переизбираться в президенты неограниченное
+          количество раз.
+          <a
+            href="https://en.wikipedia.org/wiki/2020_Russian_constitutional_referendum"
+            >Голосование</a
+          >
+          прошло летом 2020 года, поправки были приняты.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2020</span>
+          <a
+            href="https://ja.wikipedia.org/wiki/2020%E5%B9%B4-2021%E5%B9%B4%E3%83%99%E3%83%A9%E3%83%AB%E3%83%BC%E3%82%B7%E5%8F%8D%E6%94%BF%E5%BA%9C%E3%83%87%E3%83%A2"
+            >протесты в Белоруссии.</a
+          >
+          Владимир Путин выступил с поддержкой Владимира Лукашенко.
+        </li>
+        <li>
+          <span class="font-bold pr-2">20 августа 2020</span>
+          <a href="https://en.wikipedia.org/wiki/Poisoning_of_Alexei_Navalny"
+            >отравление</a
+          >
+          создателя Фонда борьбы с коррупцией Алексея Навального. Навального
+          увозят на лечение в Германию.
+        </li>
+        <li>
+          <span class="font-bold pr-2">17 января 2021</span>возвращение
+          Навального в Россию и арест, который длится до сих пор.
+        </li>
+        <li>
+          <span class="font-bold pr-2">19 января 2021</span>выход расследования
+          Фонда борьбы с коррупцией «<a
+            href="https://en.wikipedia.org/wiki/Putin%27s_Palace_(film)"
+            >Дворец для Путина. История самой большой взятки».</a
+          >
+        </li>
+        <li>
+          <span class="font-bold pr-2">июль 2021</span>статья Владимира Путина
+          <a
+            href="https://ja.wikipedia.org/wiki/%E3%83%AD%E3%82%B7%E3%82%A2%E4%BA%BA%E3%81%A8%E3%82%A6%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%8A%E4%BA%BA%E3%81%AE%E6%AD%B4%E5%8F%B2%E7%9A%84%E4%B8%80%E4%BD%93%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6"
+            >«Об историческом единстве России и Украины».</a
+          >
+        </li>
+        <li>
+          <span class="font-bold pr-2">28 февраля 2022</span>ликвидация
+          Международного историко-просветительского, правозащитного и
+          благотворительного общества
+          <a
+            href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%A2%E3%83%AB_(%E4%BA%BA%E6%A8%A9%E5%9B%A3%E4%BD%93)"
+            >«Мемориал».</a
+          >
+          Занималось расследованиями политических репрессий в СССР и современной
+          России и сохранением памяти об их жертвах.
+        </li>
+        <li>
+          <span class="font-bold pr-2">22 февраля 2022</span>Совет Федераций РФ
+          поддержал обращение Владимира Путина об использовании вооруженных сил
+          России за рубежом.
+        </li>
+        <li>
+          <span class="font-bold pr-2">22 февраля 2022</span>Владимир Путин
+          объявил о признании Россией государственности самопровозглашенных
+          республик Донбасса:
+          <a
+            href="https://en.wikipedia.org/wiki/International_recognition_of_the_Donetsk_People%27s_Republic_and_the_Luhansk_People%27s_Republic"
+            >ДНР и ЛНР в границах Донецкой и Луганской областей.</a
+          >
+        </li>
+        <li>
+          <span class="font-bold pr-2">24 февраля 2022</span>российские войска
+          вошли на территорию Украины. Начало войны.
+        </li>
+        <li>
+          <span class="font-bold pr-2">2024</span>ранее Владимир Путин заявлял,
+          что не будет баллотироваться в президенты в 2024 году. Но после
+          принятия поправок допустил, что будет.
+        </li>
+      </div>
+      <div id="list-3">
+        <div id="list no-prose">
+          <li>
+<span class="jp-bold pr-2"> 1999 </span>チェチェンの状況の悪化、
+            モスクワ、ボルゴドンスク、ブイナクスク、
+            <a
+              href="https://ja.wikipedia.org/wiki/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E3%83%81%E3%82%A7%E3%83% 81％E3％82％A7％E3％83％B3％E7％B4％9B％E4％BA％89 "
+              >チェチェンの領土への軍隊の侵入</a
+            >
+            「過激派を破壊する目的で。」
+          </li>
+          <li>
+            <span class="jp-bold pr-2">1999年12月31日</span>ロシア大統領
+            ボリス・エリツィンが辞任し、ウラジミールを後継者に任命
+            プーチン。
+          </li>
+          <li>
+            <span class="jp-bold pr-2">2000年3月26日</span>ウラジーミルプチン
+            最初の大統領任期のために公式に選出された。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2000</span>がロシア連邦の新しい国歌として割り当てられました
+            新版のソビエト国歌。
+          </li>
+          <li>
+            <span class="jp-bold pr-2">2000年4月</span>公式エンディング
+            第二次チェチェン戦争。ゲリラ戦争は2009年まで続いた。
+          </li>
+          <li>
+            テロリストによって捕らえられた<span class="jp-bold pr-2">2002年10月</span>
+            モスクワのドゥブロフカにある劇場センター。 125人の人質が死亡した。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2000</span>«Delo
+            <a
+              href="https://ja.wikipedia.org/wiki/NTV_(%E3%83%AD%E3%82%B7%E3%82%A2）"
+              > NTV </a
+            >"。独立したテレビチャンネルの段階的な清算、
+            チェチェンでの戦争、テロ攻撃、プーチンの政策を批判的にカバーする
+            一般に。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2003</span>「ユコス事件」。逮捕して
+            ユコス石油会社の責任者に対する刑事訴訟
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%9F%E3%83%8F%E3%82%A4%E3%83%AB%E3%83%BB%E3%83% 9B％E3％83％89％E3％83％AB％E3％82％B3％E3％83％95％E3％82％B9％E3％82％AD％E3％83％BC "
+              >ミハイルホドルコフスキー。</a
+            >
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2003-2004 </span>ロシアの都市でのテロ攻撃、
+            飛行機で、モスクワの地下鉄で、その後プーチンは言った
+            有名なフレーズ：「ロシアはテロリストと交渉しません、それは
+            破壊する。」
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2003</span>ジャーナリスト中毒
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%A6%E3%83%BC%E3%83%AA%E3%83%BB%E3%82%B7%E3%82% A7％E3％82％B3％E3％83％81％E3％83％BC％E3％83％92％E3％83％B3 "
+              >ユーリ・シェコチキン</a
+            >、家の爆発の状況を調査していた人
+            モスクワとボルゴドンスクと政府の腐敗の話題。
+          </li>
+          <li>
+            <span class="jp-bold pr-2">2004年3月</span>大統領選挙。
+            ウラジーミルプチンは2期目に再選されます。
+          </li>
+          <li>
+            <span class="jp-bold pr-2">2004年9月1日</span>人質取り
+            ベスランの学校。 186人の子供を含む333人が亡くなりました。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2004</span>直接選挙の廃止に関する法律
+            ロシア連邦の主題の長、現在彼らはクレムリンによって任命されています。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2004 </span>エストニア、ラトビア、ブルガリア、
+            ルーマニア、スロバキア、スロベニア、リトアニアはNATOの加盟国です。 3年後
+            <a
+              href="https://en.wikipedia.org/wiki/Munich_speech_of_Vladimir_Putin"
+              >「ミュンヘンのスピーチ」</a
+            >
+            プーチン大統領はNATO拡大について次のように述べています。
+            国際法の基本原則」。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2004 </span>
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%AC%E3%83%B3%E3%82%B8%E9%9D%A9%E5%91% BD">オレンジ革命</a>
+            ウクライナで。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2005</span>選挙法の変更
+            ロシア連邦の下院。候補者は現在、政党名簿を通過する必要があります。
+            小選挙区制は廃止されました。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2006</span>コンセプトの承認
+            <a href="https://en.wikipedia.org/wiki/Sovereign_democracy"
+              >「主権民主主義」</a
+            >。
+          </li>
+          <li>
+            <span class="jp-bold pr-2">2006年10月7日</span>ジャーナリストの殺害
+            と人権活動家
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%B3%E3%83%8A%E3%83%BB%E3%83%9D%E3%83% AA％E3％83％88％E3％82％B3％E3％83％95％E3％82％B9％E3％82％AB％E3％83％A4 "
+              >アンナポリトコフスカヤ</a
+            >、チェチェンでの戦争に多く関与しています。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2007</span>「ミュンヘンのスピーチ」。
+            ロシアでの停止行動
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E9%80% 9A％E5％B8％B8％E6％88％A6％E5％8A％9B％E6％9D％A1％E7％B4％84 "
+              >ヨーロッパにおける通常戦力条約。</a
+            >
+          </li>
+          <li>
+            ロシア連邦憲法による<span class="jp-bold pr-2"> 2008 </span>
+            ウラジーミルプチンには、3期目に再選される権利はありません。から
+            ロシアの主要政党「統一ロシア」ドミトリーが選挙に参加
+            プーチン政権の元首長、メドベージェフ。メドベージェフが勝利
+            選挙。プーチンは国の首相になります。
+          </li>
+          <li>
+            <span class="jp-bold pr-2">2008年8月</span>
+            <a
+              href="https://ja.wikipedia.org/wiki/%E5%8D%97%E3%82%AA%E3%82%BB%E3%83%81%E3%82%A2%E7%B4% 9B％E4％BA％89_（2008％E5％B9％B4） "
+              >ロシアとジョージアの軍事紛争。</a
+            >
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2008 </span>ロシア連邦憲法の改正、
+            <a
+              href="https://en.wikipedia.org/wiki/2008_amendments_to_the_Constitution_of_Russia"
+              >大統領任期を4年から6年に延長。</a
+            >
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2008</span>弁護士事件
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%82%BB%E3%83%AB%E3%82%B2%E3%82%A4%E3%83%BB%E3%83% 9E％E3％82％B0％E3％83％8B％E3％83％84％E3％82％AD％E3％83％BC "
+              >セルゲイ・マグニツキー。</a
+            >
+          </li>
+          <li>
+            <span class="jp-bold pr-2">2009年7月15日</span>殺人
+            人権活動家
+            <a href="https://en.wikipedia.org/wiki/Natalya_Estemirova"
+              >ナタリアエステミロワ。</a
+            >
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2010</span>公開キャンペーン
+            <a href="https://en.wikipedia.org/wiki/Putin_Must_Go"
+              >「プーチンは去れ」</a
+            >：プーチンの辞任を要求する署名を集める。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2011</span>プーチンは
+            再び大統領に立候補します。名前がついた
+            「キャスリング」。プーチンは、彼らが「キャスリング」に同意したと言います
+            2007年にメドベージェフ。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2011 </span>
+            <a
+              href="https://ja.wikipedia.org/wiki/2011%E5%B9%B4%E3%83%AD%E3%82%B7%E3%82%A2%E5%8F%8D%E6%94 ％BF％E5％BA％9C％E9％81％8B％E5％8B％95 "
+              >大衆抗議運動。</a
+            >
+            創造
+            <a href="https://en.wikipedia.org/wiki/Anti-Corruption_Foundation"
+              >反汚職財団</a
+            >
+            アレクセイナワルニー。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2011</span>リビアの内戦。
+            プーチンは、NATOがその軍隊を派遣したことを非難した。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2012</span>大統領選挙。ウラジミール
+            プーチン
+            <a
+              href="https://ja.wikipedia.org/wiki/2012%E5%B9%B4%E3%83%AD%E3%82%B7%E3%82%A2%E5%A4%A7%E7%B5 ％B1％E9％A0％98％E9％81％B8％E6％8C％99 "
+              >彼の3期目に選出されます。</a
+            >
+            改ざんは選挙で大量に記録されます。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2012 </span>
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%AA%E3%82%A2%E5%86%85%E6%88%A6"
+              >シリアでの内戦。</a
+            >
+            ロシアは2015年に正式にその軍隊を国に持ち込みました。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2012 </span>
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%82%BB%E3%83%AB%E3%82%B2%E3%82%A4%E3%83%BB%E3%82% B7％E3％83％A7％E3％82％A4％E3％82％B0 "
+              >セルゲイ・ショイグ</a
+            >
+            防衛大臣になります。軍の改革。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2012</span>「名誉毀損について」の記事を返す
+            ロシア連邦の刑法に。さて、その情報の普及のために
+            当局は「他人の名誉と尊厳を誹謗中傷する」ことを検討します
+            （たとえば、当局の代表者）、罰金および
+            是正作業。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2012</span>外国
+            エージェント。」非政府組織は「外国」として認識されています
+            他の国から財政支援を受けている場合は
+            ロシア当局によると、彼らは政治活動に従事しています。のため
+            医療、文化、
+            社会福祉は彼らの活動を止めなければなりませんでした。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2012 </span>
+            <a href="https://en.wikipedia.org/wiki/Ildar_Dadin"
+              >「イルダーダディンの法則」。</a
+            >
+            禁止会議、集会、デモ、行進、
+            6か月間に数回ピケット。 Ildar Dadin、
+            この記事に基づいて有罪判決を受けた最初の人は、3年の懲役を宣告されました。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2012 </span>
+            <a href="https://en.wikipedia.org/wiki/Dima_Yakovlev_Law"
+              >「ディマヤコブレフの法則」</a
+            >：米国市民によるロシアからの孤児の養子縁組の禁止
+            （「マグニツキー事件」に関連して米国の制裁への対応を検討）。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2013</span>反汚職財団
+            腐敗した財産に関する調査の公開を開始
+            ロシアの政治家。
+          </li>
+          <h4 class="jp-bold"> 2013年にはいくつかの法律が採択されました：</h4>
+          <li>
+            インターネットリソースの超法規的閉鎖に関する法律。当局に許可する
+            当局の意見では、「大衆を呼びかける」サイトをブロックする
+            裁判所の決定なしに、抗議または過激主義」。
+          </li>
+          <li>
+            「信者の気持ちを侮辱することに関する」法律。提供する修正
+            懲役の形での刑事責任。事件後に受け入れられた
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%83%E3%82%B7%E3%83%BC%E3%83%BB%E3%83% A9％E3％82％A4％E3％82％AA％E3％83％83％E3％83％88 "
+              >プッシーライオット。</a
+            >
+          </li>
+          <li>
+            に関する法律
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%AD%E3%82%B7%E3%82%A2%E3%81%AB%E3%81%8A%E3%81% 91％E3％82％8B％E5％90％8C％E6％80％A7％E6％84％9B％E5％AE％A3％E4％BC％9D％E7％A6％81％E6％AD％A2％ E6％B3％95 "
+              >「同性愛宣伝法」を禁止する。</a
+            >
+            当局の意見では、「促進する活動の禁止
+            未成年者間の非伝統的な性的関係」。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2014 </span>
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%AD%E3%82%B7%E3%82%A2%E3%81%AB%E3%82%88%E3%82% 8B％E3％82％AF％E3％83％AA％E3％83％9F％E3％82％A2％E3％81％AE％E4％BD％B5％E5％90％88 "
+              >クリミアの併合</a
+            >、ロシアに対する制裁、相互ロシア料理
+            禁輸。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2014</span>選挙法
+            下院。新しい条件により、独立したアクセスが制限されます
+            候補者と小党からの候補者。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2015</span>殺人
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%AA%E3%82%B9%E3%83%BB%E3%83%8D%E3%83% A0％E3％83％84％E3％82％A9％E3％83％95 "
+              >ボリス・ネムツォフ</a
+            >、主要な野党政治家の1人。著者を含むネムツォフ
+            報告する
+            <ahref="https://en.wikipedia.org/wiki/Putin._War">「プーチン。戦争」</a>
+            ウクライナの政治におけるロシアの干渉とロシアの参加について
+            クリミアの併合とウクライナ東部での戦争における軍隊。
+            殺人の顧客は今日まで発見されていません。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2015</span>不要
+            組織」は、当局が非政府組織を閉鎖することを承認します
+            その活動が「国家安全保障を脅かす」組織
+            RF」。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2017</span>反汚職財団
+            注目を集める調査を公開
+            <a href="https://en.wikipedia.org/wiki/He_Is_Not_Dimon_to_You"
+              >「彼はダイモンではない」</a
+            >
+            ドミトリー・メドヴェージェフについて。全国で大衆抗議。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2018</span>大統領選挙。ウラジミール
+            プーチンは彼の第4期に選出されます。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2018 </span>
+            <a
+              href="https://en.wikipedia.org/wiki/Poisoning_of_Sergei_and_Yulia_Skripal"
+              >セルゲイとユリア・スクリパルの中毒。</a
+            >
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2018</span>殺人事件
+            中央アフリカ共和国のロシア人ジャーナリスト
+            国のロシア軍の存在についてのドキュメンタリーを撮影しました
+            企業
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%AF%E3%82%B0%E3%83%8A%E3%83%BC%E3%83%BB%E3%82% B0％E3％83％AB％E3％83％BC％E3％83％97 "
+              >ワグナーPMC。</a
+            >
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2019</span>に関する法律の改正
+            「外国エージェント」。これで、このステータスを個人に割り当てることができます
+            人。メディア間の外国エージェントのリストの拡大。
+          </li>
+          <li>
+            連邦政府へのメッセージの<span class="jp-bold pr-2"> 2020 </span>
+            プーチンとの会談は、ロシアがその歴史の中で初めてと言っているたぶん......だろう
+            核ミサイル兵器の分野で他の国に先んじること。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2020</span>プーチンが国民投票を発表
+            ロシア連邦憲法の改正について。修正の1つ
+            無制限の大統領に再選される一人の能力
+            何度か。
+            <a
+              href="https://en.wikipedia.org/wiki/2020_Russian_constitutional_referendum"
+              >投票</a
+            >
+            2020年の夏に可決され、改正案が採択されました。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2020 </span>
+            <a
+              href="https://ja.wikipedia.org/wiki/2020%E5%B9%B4-2021%E5%B9%B4%E3%83%99%E3%83%A9%E3%83%AB%E3 ％83％BC％E3％82％B7％E5％8F％8D％E6％94％BF％E5％BA％9C％E3％83％87％E3％83％A2 "
+              >ベラルーシでの抗議。</a
+            >
+            ウラジミールプチンはウラジミールルカシェンコを支援しました。
+          </li>
+          <li>
+            <span class="jp-bold pr-2">2020年8月20日</span>
+            <a href="https://en.wikipedia.org/wiki/Poisoning_of_Alexei_Navalny"
+              >中毒</a
+            >
+            反汚職財団アレクセイナワルニーの創設者。ナワルニー
+            治療のためにドイツに連れて行かれました。
+          </li>
+          <li>
+            <span class="jp-bold pr-2">2021年1月17日</span>return
+            ロシアへの海軍と今日まで続く逮捕。
+          </li>
+          <li>
+            <span class="jp-bold pr-2">2021年1月19日</span>調査リリース
+            腐敗防止基金"<a
+              href="https://en.wikipedia.org/wiki/Putin%27s_Palace_(film）"
+              >プーチンの宮殿。最大の賄賂の話。」</a
+            >
+          </li>
+          <li>
+            <span class="jp-bold pr-2">2021年7月</span>ウラジーミルプチンによる記事
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%AD%E3%82%B7%E3%82%A2%E4%BA%BA%E3%81%A8%E3%82% A6％E3％82％AF％E3％83％A9％E3％82％A4％E3％83％8A％E4％BA％BA％E3％81％AE％E6％AD％B4％E5％8F％B2％ E7％9A％84％E4％B8％80％E4％BD％93％E6％80％A7％E3％81％AB％E3％81％A4％E3％81％84％E3％81％A6 "
+              >「ロシアとウクライナの歴史的統一について」</a
+            >
+          </li>
+          <li>
+            <span class="jp-bold pr-2">2022年2月28日</span>清算
+            国際的な歴史的、教育的、人権および
+            慈善団体
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%A2%E3%83%AB_(%E4%BA ％BA％E6％A8％A9％E5％9B％A3％E4％BD％93） "
+              >「メモリアル」。</a
+            >
+            ソ連と現代の政治的抑圧の調査に従事
+            ロシアと彼らの犠牲者の記憶を保存します。
+          </li>
+          <li>
+            <span class="jp-bold pr-2">2022年2月22日</span>ロシア連邦連盟評議会
+            軍隊の使用に関するウラジーミル・プーチンの訴えを支持した
+            海外のロシア。
+          </li>
+          <li>
+            <span class="jp-bold pr-2">2022年2月22日</span>ウラジーミルプチン
+            自称の国家としてのロシアによる承認を発表した
+            ドンバス共和国：
+            <a
+              href="https://en.wikipedia.org/wiki/International_recognition_of_the_Donetsk_People%27s_Republic_and_the_Luhansk_People%27s_Republic"
+              >ドネツクとルガンスク地域の境界内のDNRとLNR。</a
+            >
+          </li>
+          <li>
+            <span class="jp-bold pr-2">2022年2月24日</span>ロシア軍
+            ウクライナの領土に入った。戦争の始まり。
+          </li>
+          <li>
+            <span class="jp-bold pr-2"> 2024</span>以前のウラジーミルプチンは述べた
+            彼は2024年に大統領に立候補しないだろうと。しかし後
+            修正案の採択により、何が起こるかが可能になりました。
+          </li>
+        </div>
+      </div>
+      <div id="list-2">
+        <div id="list no-prose">
+          <li>
+            <span class="font-bold pr-2">1999</span>aggravation of the situation
+            in Chechnya, explosions of residential buildings in Moscow,
+            Volgodonsk, Buynaksk,
+            <a
+              href="https://ja.wikipedia.org/wiki/%E7%AC%AC%E4%BA%8C%E6%AC%A1%E3%83%81%E3%82%A7%E3%83% 81%E3%82%A7%E3%83%B3%E7%B4%9B%E4%BA%89"
+              >the entry of troops into the territory of Chechnya</a
+            >
+            "for the purpose of destroying the militants."
+          </li>
+          <li>
+            <span class="font-bold pr-2">December 31, 1999</span>President of
+            Russia Boris Yeltsin resigns and appoints Vladimir as his successor
+            Putin.
+          </li>
+          <li>
+            <span class="font-bold pr-2">March 26, 2000</span>Vladimir Putin
+            officially elected for the first presidential term.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2000</span>assigned as the new anthem
+            of the Russian Federation Soviet anthem in a new edition.
+          </li>
+          <li>
+            <span class="font-bold pr-2">April 2000</span>official ending Second
+            Chechen War. The guerrilla war continued until 2009.
+          </li>
+          <li>
+            <span class="font-bold pr-2">October 2002</span>captured by
+            terrorists theater center on Dubrovka in Moscow. 125 hostages died.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2000</span>«Delo
+            <a
+              href="https://ja.wikipedia.org/wiki/NTV_(%E3%83%AD%E3%82%B7%E3%82%A2)"
+              >NTV</a
+            >". Gradual liquidation of an independent television channel,
+            critically covering the war in Chechnya, terrorist attacks and
+            Putin's policies in in general.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2003</span>"The Yukos Case". Arrest and
+            criminal case against the head of the Yukos oil company
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%9F%E3%83%8F%E3%82%A4%E3%83%AB%E3%83%BB%E3%83% 9B%E3%83%89%E3%83%AB%E3%82%B3%E3%83%95%E3%82%B9%E3%82%AD%E3%83%BC"
+              >Mikhail Khodorkovsky.</a
+            >
+          </li>
+          <li>
+            <span class="font-bold pr-2">2003-2004</span>terror attacks in
+            Russian cities, on planes, in the Moscow metro, after which Putin
+            said famous phrase: “Russia does not negotiate with terrorists, it
+            destroys."
+          </li>
+          <li>
+            <span class="font-bold pr-2">2003</span>journalist poisoning
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%A6%E3%83%BC%E3%83%AA%E3%83%BB%E3%82%B7%E3%82% A7%E3%82%B3%E3%83%81%E3%83%BC%E3%83%92%E3%83%B3"
+              >Yuri Shchekochikhin</a
+            >, who was investigating the circumstances of the explosions of
+            houses in Moscow and Volgodonsk and the topic of corruption in
+            government.
+          </li>
+          <li>
+            <span class="font-bold pr-2">March 2004</span>Presidential
+            elections. Vladimir Putin is re-elected for a second term.
+          </li>
+          <li>
+            <span class="font-bold pr-2">September 1, 2004</span>hostage taking
+            in school in Beslan. 333 people died, including 186 children.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2004</span>law on the abolition of
+            direct elections heads of subjects of the Russian Federation, now
+            they are appointed by the Kremlin.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2004</span>Estonia, Latvia, Bulgaria,
+            Romania, Slovakia, Slovenia and Lithuania are members of NATO. Three
+            years later in
+            <a
+              href="https://en.wikipedia.org/wiki/Munich_speech_of_Vladimir_Putin"
+              >“Munich speech”</a
+            >
+            Putin will say about NATO expansion that “we see neglect fundamental
+            principles of international law”.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2004</span>
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%AC%E3%83%B3%E3%82%B8%E9%9D%A9%E5%91% BD"
+              >Orange Revolution</a
+            >
+            in Ukraine.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2005</span>Changing the electoral law
+            in State Duma of the Russian Federation. Candidates are now required
+            to go through party lists, Single-member constituencies were
+            abolished.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2006</span>concept acceptance
+            <a href="https://en.wikipedia.org/wiki/Sovereign_democracy"
+              >“sovereign democracy”</a
+            >.
+          </li>
+          <li>
+            <span class="font-bold pr-2">October 7, 2006</span>murder of a
+            journalist and human rights activists
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%B3%E3%83%8A%E3%83%BB%E3%83%9D%E3%83% AA%E3%83%88%E3%82%B3%E3%83%95%E3%82%B9%E3%82%AB%E3%83%A4"
+              >Anna Politkovskaya</a
+            >, a lot involved in the war in Chechnya.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2007</span>"Munich Speech". Suspension
+            in the Russian Federationactions
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%A8%E3%83%BC%E3%83%AD%E3%83%83%E3%83%91%E9%80% 9A%E5%B8%B8%E6%88%A6%E5%8A%9B%E6%9D%A1%E7%B4%84"
+              >Treaties on Conventional Armed Forces in Europe.</a
+            >
+          </li>
+          <li>
+            <span class="font-bold pr-2">2008</span>according to the
+            Constitution of the Russian Federation Vladimir Putin has no right
+            to be re-elected for a third term. From the main Russian party
+            "United Russia" Dmitry participates in the elections Medvedev,
+            former head of Putin's administration. Medvedev wins elections.
+            Putin becomes Prime Minister of the country.
+          </li>
+          <li>
+            <span class="font-bold pr-2">August 2008</span>
+            <a
+              href="https://ja.wikipedia.org/wiki/%E5%8D%97%E3%82%AA%E3%82%BB%E3%83%81%E3%82%A2%E7%B4% 9B%E4%BA%89_(2008%E5%B9%B4)"
+              >Russian-Georgian military conflict.</a
+            >
+          </li>
+          <li>
+            <span class="font-bold pr-2">2008</span>amendments to the
+            Constitution of the Russian Federation,
+            <a
+              href="https://en.wikipedia.org/wiki/2008_amendments_to_the_Constitution_of_Russia"
+              >increasing the presidential term from 4 to 6 years.</a
+            >
+          </li>
+          <li>
+            <span class="font-bold pr-2">2008</span>lawyer case
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%82%BB%E3%83%AB%E3%82%B2%E3%82%A4%E3%83%BB%E3%83% 9E%E3%82%B0%E3%83%8B%E3%83%84%E3%82%AD%E3%83%BC"
+              >Sergey Magnitsky.</a
+            >
+          </li>
+          <li>
+            <span class="font-bold pr-2">July 15, 2009</span>murder human rights
+            activists
+            <a href="https://en.wikipedia.org/wiki/Natalya_Estemirova"
+              >Natalia Estemirova.</a
+            >
+          </li>
+          <li>
+            <span class="font-bold pr-2">2010</span>public campaign
+            <a href="https://en.wikipedia.org/wiki/Putin_Must_Go"
+              >"Putin must go"</a
+            >: collecting signatures demanding Putin's resignation.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2011</span>Putin announces that will
+            run for president again. It got the name "castling". Putin says they
+            agreed on "castling" with Medvedev back in 2007.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2011</span>
+            <a
+              href="https://ja.wikipedia.org/wiki/2011%E5%B9%B4%E3%83%AD%E3%82%B7%E3%82%A2%E5%8F%8D%E6%94 %BF%E5%BA%9C%E9%81%8B%E5%8B%95"
+              >Mass protest movement.</a
+            >
+            Creation
+            <a href="https://en.wikipedia.org/wiki/Anti-Corruption_Foundation"
+              >Anti-Corruption Foundation</a
+            >
+            Alexei Navalny.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2011</span>The civil war in Libya.
+            Putin condemned NATO for sending its troops.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2012</span>Presidential elections.
+            Vladimir Putin
+            <a
+              href="https://ja.wikipedia.org/wiki/2012%E5%B9%B4%E3%83%AD%E3%82%B7%E3%82%A2%E5%A4%A7%E7%B5 %B1%E9%A0%98%E9%81%B8%E6%8C%99"
+              >is elected to his third term.</a
+            >
+            Falsifications are massively recorded in elections.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2012</span>
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%AA%E3%82%A2%E5%86%85%E6%88%A6"
+              >Civil war in Syria.</a
+            >
+            Russia officially brought its troops into the country in 2015.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2012</span>
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%82%BB%E3%83%AB%E3%82%B2%E3%82%A4%E3%83%BB%E3%82% B7%E3%83%A7%E3%82%A4%E3%82%B0"
+              >Sergey Shoigu</a
+            >
+            becomes Minister of Defense. Army reforms.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2012</span>return of the article "On
+            libel" to the Criminal Code of the Russian Federation. Now for the
+            dissemination of information that the authorities will consider
+            "discrediting the honor and dignity of another person" (for example,
+            a representative of the authorities), fines and corrective work.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2012</span>Law on foreign agents."
+            Non-governmental organizations are recognized as "foreign agents" if
+            they receive financial support from other countries and According to
+            the Russian authorities, they are engaged in political activities.
+            Because of new legal conditions for dozens of NGOs from the medical,
+            cultural, social services had to stop their activities.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2012</span>
+            <a href="https://en.wikipedia.org/wiki/Ildar_Dadin"
+              >“the law of Ildar Dadin”.</a
+            >
+            Ban onmeetings, rallies, demonstrations, marches and pickets several
+            times over a six-month period. Ildar Dadin, the first person
+            convicted under this article was sentenced to three years in prison.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2012</span>
+            <a href="https://en.wikipedia.org/wiki/Dima_Yakovlev_Law"
+              >"Dima Yakovlev's law"</a
+            >: a ban on the adoption of orphans from Russia by US citizens
+            (considered a response to US sanctions in connection with the
+            "Magnitsky case").
+          </li>
+          <li>
+            <span class="font-bold pr-2">2013</span>Anti-Corruption Foundation
+            starts publishing investigations on corrupt property Russian
+            politicians.
+          </li>
+          <h4>A number of laws are adopted in 2013:</h4>
+          <li>
+            law on extrajudicial closure of Internet resources. Allows the
+            authorities block sites that, in the opinion of the authorities,
+            “call for mass protests or extremism”, without a court decision.
+          </li>
+          <li>
+            law "on insulting the feelings of believers." Amendments providing
+            criminal liability in the form of imprisonment. Accepted after the
+            case
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%83%E3%82%B7%E3%83%BC%E3%83%BB%E3%83% A9%E3%82%A4%E3%82%AA%E3%83%83%E3%83%88"
+              >Pussy Riot.</a
+            >
+          </li>
+          <li>
+            law on
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%AD%E3%82%B7%E3%82%A2%E3%81%AB%E3%81%8A%E3%81% 91%E3%82%8B%E5%90%8C%E6%80%A7%E6%84%9B%E5%AE%A3%E4%BC%9D%E7%A6%81%E6%AD%A2% E6%B3%95"
+              >ban "homosexual propaganda".</a
+            >
+            A ban on activities that, in the opinion of the authorities,
+            “promotes non-traditional sexual relations among minors”.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2014</span>
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%AD%E3%82%B7%E3%82%A2%E3%81%AB%E3%82%88%E3%82% 8B%E3%82%AF%E3%83%AA%E3%83%9F%E3%82%A2%E3%81%AE%E4%BD%B5%E5%90%88"
+              >annexation of Crimea</a
+            >, sanctions against Russia, reciprocal Russian food embargo.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2014</span>electoral law in State Duma.
+            New conditions restrict access to independent candidates and
+            candidates from small parties.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2015</span>murder
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%9C%E3%83%AA%E3%82%B9%E3%83%BB%E3%83%8D%E3%83% A0%E3%83%84%E3%82%A9%E3%83%95"
+              >Boris Nemtsov</a
+            >, one of the main opposition politicians. Nemtsov including the
+            author report
+            <a href="https://en.wikipedia.org/wiki/Putin._War">“Putin. War"</a>
+            on Russian interference in Ukrainian politics and the participation
+            of Russian armed forces in the annexation of Crimea and the war in
+            eastern Ukraine. The customer of the murder has not been found to
+            this day.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2015</span>Unwanted organizations”,
+            authorizes the authorities to close down non-governmental
+            organizations whose activities “threaten national security RF".
+          </li>
+          <li>
+            <span class="font-bold pr-2">2017</span>Anti-Corruption Foundation
+            publishes a high-profile investigation
+            <a href="https://en.wikipedia.org/wiki/He_Is_Not_Dimon_to_You"
+              >"He's not Dimon"</a
+            >
+            about Dmitry Medvedev. Mass protests across the country.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2018</span>Presidential elections.
+            Vladimir Putin is elected to his fourth term.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2018</span>
+            <a
+              href="https://en.wikipedia.org/wiki/Poisoning_of_Sergei_and_Yulia_Skripal"
+              >poisoning of Sergei and Yulia Skripal.</a
+            >
+          </li>
+          <li>
+            <span class="font-bold pr-2">2018</span>murder in Central African
+            Republic of Russian journalists who filmed a documentary about the
+            presence of the Russian military in the country companies
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%AF%E3%82%B0%E3%83%8A%E3%83%BC%E3%83%BB%E3%82% B0%E3%83%AB%E3%83%BC%E3%83%97"
+              >Wagner PMC.</a
+            >
+          </li>
+          <li>
+            <span class="font-bold pr-2">2019</span>amendments to the law on
+            "foreign agents". Now this status can be assigned to individuals
+            persons. Expansion of the list of foreign agents among the media.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2020</span>in a message to the Federal
+            meeting Putin says that Russia for the first time in its
+            historycould to get ahead of other countries in the field of nuclear
+            missile weapons.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2020</span>Putin announces referendum
+            on on amendments to the Constitution of the Russian Federation. One
+            of the amendments the ability of one person to be re-elected to the
+            presidency unlimited number of times.
+            <a
+              href="https://en.wikipedia.org/wiki/2020_Russian_constitutional_referendum"
+              >Vote</a
+            >
+            passed in the summer of 2020, the amendments were adopted.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2020</span>
+            <a
+              href="https://ja.wikipedia.org/wiki/2020%E5%B9%B4-2021%E5%B9%B4%E3%83%99%E3%83%A9%E3%83%AB%E3 %83%BC%E3%82%B7%E5%8F%8D%E6%94%BF%E5%BA%9C%E3%83%87%E3%83%A2"
+              >protests in Belarus.</a
+            >
+            Vladimir Putin supported Vladimir Lukashenko.
+          </li>
+          <li>
+            <span class="font-bold pr-2">August 20, 2020</span>
+            <a href="https://en.wikipedia.org/wiki/Poisoning_of_Alexei_Navalny"
+              >poisoning</a
+            >
+            founder of the Anti-Corruption Foundation Alexei Navalny. Navalny
+            taken to Germany for treatment.
+          </li>
+          <li>
+            <span class="font-bold pr-2">January 17, 2021</span>return Navalny
+            to Russia and an arrest that continues to this day.
+          </li>
+          <li>
+            <span class="font-bold pr-2">January 19, 2021</span>investigation
+            release Anti-Corruption Fund "<a
+              href="https://en.wikipedia.org/wiki/Putin%27s_Palace_(film)"
+              >Palace for Putin. The story of the biggest bribe.”</a
+            >
+          </li>
+          <li>
+            <span class="font-bold pr-2">July 2021</span>Article by Vladimir
+            Putin
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%AD%E3%82%B7%E3%82%A2%E4%BA%BA%E3%81%A8%E3%82% A6%E3%82%AF%E3%83%A9%E3%82%A4%E3%83%8A%E4%BA%BA%E3%81%AE%E6%AD%B4%E5%8F%B2% E7%9A%84%E4%B8%80%E4%BD%93%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6"
+              >"On the historical unity of Russia and Ukraine".</a
+            >
+          </li>
+          <li>
+            <span class="font-bold pr-2">February 28, 2022</span>liquidation
+            International historical, educational, human rights and charitable
+            society
+            <a
+              href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%83%A2%E3%83%AA%E3%82%A2%E3%83%AB_(%E4%BA %BA%E6%A8%A9%E5%9B%A3%E4%BD%93)"
+              >"Memorial".</a
+            >
+            Engaged in investigations of political repressions in the USSR and
+            modern Russia and preserving the memory of their victims.
+          </li>
+          <li>
+            <span class="font-bold pr-2">February 22, 2022</span>Council of
+            Federations of the Russian Federation supported Vladimir Putin's
+            appeal on the use of armed forces Russia abroad.
+          </li>
+          <li>
+            <span class="font-bold pr-2">February 22, 2022</span>Vladimir Putin
+            announced the recognition by Russia of the statehood of the
+            self-proclaimed republics of Donbass:
+            <a
+              href="https://en.wikipedia.org/wiki/International_recognition_of_the_Donetsk_People%27s_Republic_and_the_Luhansk_People%27s_Republic"
+              >DNR and LNR within the borders of Donetsk and Lugansk regions.</a
+            >
+          </li>
+          <li>
+            <span class="font-bold pr-2">February 24, 2022</span>Russian troops
+            entered the territory of Ukraine. The beginning of the war.
+          </li>
+          <li>
+            <span class="font-bold pr-2">2024</span>Earlier Vladimir Putin
+            stated that he will not run for president in 2024. But after the
+            adoption of the amendments allowed what would happen.
+          </li>
+        </div>
+      </div>
+    </article>
   </body>
 </html>
