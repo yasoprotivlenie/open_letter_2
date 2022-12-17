@@ -19,3 +19,11 @@ root {
   font-family: "M PLUS 1p", sans-serif;
   font-weight: 800;
 }
+
+h4 {
+  @apply font-bold;
+}
+
+h5 {
+  @apply italic;
+}
