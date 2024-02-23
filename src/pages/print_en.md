@@ -5,7 +5,7 @@ prose: prose-sm
 labels:
     - "Russians for Ukraine: An organization of Russian-speaking volunteers at  the Poland-Ukraine border."
     - "International Project \"HOPE\": Engages in humanitarian support."
-    - Ongoing collection of tickets for Ukrainians staying in Russia.
+    - Ongoing fundraising for tickets for Ukrainians stranded in Russia.
 
 ---
 
