@@ -1,0 +1,62 @@
+---
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        rel="shortcut icon"
+        type="image/x-icon"
+        href="https://images.squarespace-cdn.com/content/v1/6226544384704c71b90fb38e/8fa3a4b8-5596-45a1-9e3a-ea10290604c7/favicon.ico?format=100w"
+    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@800;900&display=swap"
+        rel="stylesheet"
+    />
+    <style is:global>
+        @tailwind base;
+        @tailwind components;
+
+        .btn {
+            @apply bg-white p-2 no-underline ring-1 ring-black transition duration-150 hover:text-blue-500 hover:ring-2 hover:ring-blue-500 focus:ring-4 active:text-blue-600 active:ring-blue-600;
+        }
+
+        root {
+            --tw-prose-links: #1f58d3;
+        }
+
+        @tailwind utilities;
+
+        @page {
+            size: auto;
+            margin: 0mm;
+        }
+        .jp-bold {
+            font-family: "M PLUS 1p", sans-serif;
+            font-weight: 800;
+        }
+
+        h4 {
+            @apply font-bold;
+        }
+
+        h5 {
+            @apply italic;
+        }
+    </style>
+    <body id="top">
+        <a
+            href="#top"
+            class="btn fixed bottom-0 right-0 m-4 text-sm print:hidden">TOP</a
+        >
+        <slot />
+    </body>
+</head>
