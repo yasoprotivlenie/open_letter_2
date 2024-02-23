@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./*.html"],
+  content: ["./src/**/*.{html,js,astro}"],
   theme: {
     extend: {
       typography: ({ theme }) => ({
