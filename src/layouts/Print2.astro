@@ -1,0 +1,89 @@
+---
+import QRCode from "../components/QRCode.astro";
+import SNS from "../components/SNS.astro";
+const {
+  title,
+  labels,
+  links,
+  prose = "prose-lg",
+  outro,
+} = Astro.props.frontmatter;
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="shortcut icon"
+    type="image/x-icon"
+    href="https://images.squarespace-cdn.com/content/v1/6226544384704c71b90fb38e/8fa3a4b8-5596-45a1-9e3a-ea10290604c7/favicon.ico?format=100w"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@800;900&display=swap"
+    rel="stylesheet"
+  />
+  <style is:global>
+    @tailwind base;
+    @tailwind components;
+
+    @tailwind utilities;
+
+    @page {
+      size: auto;
+      margin: 0mm;
+    }
+    .jp-bold {
+      font-family: "M PLUS 1p", sans-serif;
+      font-weight: 800;
+    }
+
+    h4 {
+      @apply font-bold;
+    }
+
+    h5 {
+      @apply italic;
+    }
+
+    b {
+      font-family: "M PLUS 1p", sans-serif;
+      font-weight: 800;
+    }
+
+    @media print {
+      a {
+        text-decoration: none !important;
+        color: black !important;
+      }
+
+      li {
+        padding: 0;
+      }
+    }
+    article img {
+      @apply h-24 w-24;
+    }
+    article p:first {
+      margin-top: 0 !important;
+    }
+  </style>
+  <body class="p-4">
+    <SNS {title} />
+    <article
+      class:list={[prose, true]}
+      class="prose container mx-auto mt-4 max-w-5xl"
+      style="column-count: 2; column-gap: 20px;"
+    >
+      <slot />
+      {
+        links.map((link, index) => (
+          <QRCode title={labels[index]} href={link} hrefLabel={link} />
+        ))
+      }
+      {outro.map((o) => <h3>{o}</h3>)}
+    </article>
+  </body>
+</head>

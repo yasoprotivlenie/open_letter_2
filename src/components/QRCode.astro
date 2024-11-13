@@ -1,14 +1,25 @@
 ---
-const { href, src, title, hrefLabel } = Astro.props;
+import QRCodeLib from "qrcode";
+
+const { href, title, hrefLabel } = Astro.props;
+
+let qrDataUri;
+if (href) {
+  qrDataUri = await QRCodeLib.toDataURL(href, { width: 96, margin: 1 });
+}
 ---
 
 <a
-    {href}
-    class="mb-8 flex flex-row items-center justify-between no-underline hover:underline"
+  href={href}
+  class="mb-8 flex flex-row items-center justify-between no-underline hover:underline"
 >
-    <div class="flex flex-col">
-        <span class="mb-1 text-black">{title}</span>
-        <span class="text-xs">{hrefLabel || href}</span>
-    </div>
-    <img {src} alt={title} class="m-0 ml-4 block h-24 w-24 p-0" />
+  <div class="flex flex-col">
+    <span class="mb-1 text-black">{title}</span>
+    <span class="text-xs">{hrefLabel || href}</span>
+  </div>
+  {
+    qrDataUri && (
+      <img src={qrDataUri} alt={title} class="m-0 ml-4 block h-24 w-24 p-0" />
+    )
+  }
 </a>
