@@ -83,7 +83,9 @@ const {
           <QRCode title={labels[index]} href={link} hrefLabel={link} />
         ))
       }
-      {outro?.map((o) => <h3>{o}</h3>)}
+      <div class="text-gray-600 text-sm">
+        {outro?.map((o) => <p>{o}</p>)}
+      </div>
     </article>
   </body>
 </head>
